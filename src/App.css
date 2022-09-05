@@ -133,8 +133,8 @@ button {
   }
 
   .selectNumbersContainer {
-    gap: 1.5rem;
-    width: 30rem;
+    gap: 1rem;
+    width: 100%;
     padding: 1rem;
     border: 1px solid white;
     border-radius: 1.5rem;
@@ -143,7 +143,7 @@ button {
   .selectNumbersContainer button {
     padding: 0.875rem;
     font-size: 0.5rem;
-    width: 3.2rem;
+    width: 100%;
     margin-left: 0.5rem;
   }
 
