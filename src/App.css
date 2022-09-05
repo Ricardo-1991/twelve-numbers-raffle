@@ -38,7 +38,7 @@ button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
-  width: 30rem;
+  width: 100%;
   padding: 1.5rem;
   border: 1px solid white;
   border-radius: 1.5rem;
