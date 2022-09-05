@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -20,19 +20,27 @@ function App() {
     }
   }
 
-  function getTwelves() {
+  function getTwelvesNumber() {
     const randomNumbers = [...numbers].sort(() => Math.random() - 0.5);
+    let sixPairNumbers = [];
+    let sixOddNumbers = [];
     randomNumbers.forEach((number) => {
-      if (odd.length < 6 && number % 2 !== 0 && odd.indexOf(number) == -1) {
-        setOdd((prevNumbers) => [...prevNumbers, number]);
-      } else if (
-        pair.length < 6 &&
-        number % 2 === 0 &&
-        pair.indexOf(number) == -1
+      if (
+        sixOddNumbers.length < 6 &&
+        number % 2 !== 0 &&
+        !sixOddNumbers.includes(number)
       ) {
-        setPair((prevNumbers) => [...prevNumbers, number]);
+        sixOddNumbers = [...sixOddNumbers, number];
+      } else if (
+        sixPairNumbers.length < 6 &&
+        number % 2 === 0 &&
+        !sixPairNumbers.includes(number)
+      ) {
+        sixPairNumbers = [...sixPairNumbers, number];
       }
     });
+    setPair(sixPairNumbers);
+    setOdd(sixOddNumbers);
   }
 
   function deleteNumber() {
@@ -57,29 +65,49 @@ function App() {
 
   return (
     <div className="container">
-      <div className="buttonsContainer">
+      <div className="selectNumbersContainer">
         {arrayNumbers.map((number) => (
           <button onClick={() => getNumber(number)}>{number}</button>
         ))}
       </div>
-      <div className="chosenNumbers">
-        {numbers.map((number) => (
-          <p>{number}</p>
-        ))}
+      {numbers.length > 0 && (
+        <div className="chosenNumbers">
+          {numbers.map((number) => (
+            <p>{number}</p>
+          ))}
+        </div>
+      )}
+      <div className="buttonsContainer">
+        <div className="deleteNumber">
+          <button onClick={deleteNumber}>
+            Apagar último número adicionado
+          </button>
+        </div>
+        <div className="getTwelvesNumbers">
+          <button onClick={getTwelvesNumber}>Selecionar Ímpares e Pares</button>
+        </div>
       </div>
-      <button onClick={deleteNumber}>Corrigir número adicionado</button>
-      <button onClick={getTwelves}>Selecionar Pares e Impares</button>
       <div className="twelveNumbers">
-        <div>
-          {odd.map((oddNumber) => (
-            <p>{oddNumber}</p>
-          ))}
-        </div>
-        <div>
-          {pair.map((pairNumber) => (
-            <p>{pairNumber}</p>
-          ))}
-        </div>
+        {odd.length > 0 && (
+          <div>
+            <h1>Ímpares</h1>
+            <div className="oddNumbers">
+              {odd.map((oddNumber) => (
+                <p>{oddNumber}</p>
+              ))}
+            </div>
+          </div>
+        )}
+        {pair.length > 0 && (
+          <div>
+            <h1>Pares</h1>
+            <div className="pairNumbers">
+              {pair.map((pairNumber) => (
+                <p>{pairNumber}</p>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
