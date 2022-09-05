@@ -124,19 +124,16 @@ button {
 }
 
 @media (max-width: 600px) {
-  .container {
-    width: 100%;
-  }
   .chosenNumbers {
     padding: 0.875rem;
   }
   .chosenNumbers p {
-    font-size: 0.9rem;
-    margin-left: 0.8rem;
+    font-size: 0.5rem;
+    margin-left: 0.6rem;
   }
 
   .selectNumbersContainer {
-    gap: 2rem;
+    gap: 1.5rem;
     width: 30rem;
     padding: 1rem;
     border: 1px solid white;
@@ -144,35 +141,36 @@ button {
   }
 
   .selectNumbersContainer button {
-    padding: 1rem;
-    font-size: 0.8rem;
-    width: 4rem;
+    padding: 0.875rem;
+    font-size: 0.5rem;
+    width: 3.2rem;
+    margin-left: 0.5rem;
   }
 
   .deleteNumber button {
     padding: 0.8rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 
   .getTwelvesNumbers button {
     padding: 0.8rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 
   .twelveNumbers h1 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .oddNumbers,
   .pairNumbers {
     margin-top: 1rem;
     display: flex;
-    padding: 1rem;
+    padding: 0.6rem;
   }
 
   .twelveNumbers p {
     color: #f5f5f5;
     margin-left: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
