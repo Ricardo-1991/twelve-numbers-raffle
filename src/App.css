@@ -147,12 +147,13 @@ button {
   }
 
   .deleteNumber button {
-    padding: 0.3rem;
+    padding: 0.4rem;
     font-size: 0.875rem;
   }
 
   .getTwelvesNumbers button {
-    padding: 0.3rem;
+    padding: 0.4rem;
+
     font-size: 0.875rem;
   }
 
