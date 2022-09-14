@@ -70,8 +70,9 @@ button {
 .buttonsContainer {
   margin-top: 1.5rem;
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
 }
 
 .deleteNumber button {
@@ -91,16 +92,14 @@ button {
   font-size: 1.2rem;
   border: none;
 }
-.twelveNumbers {
-  display: flex;
-  gap: 3rem;
-}
 
 .twelveNumbers {
   display: flex;
   width: 100%;
   margin-top: 2rem;
+  gap: 3rem;
   justify-content: center;
+  text-align: left;
 }
 
 .twelveNumbers h1 {
@@ -113,14 +112,14 @@ button {
 .pairNumbers {
   margin-top: 1rem;
   display: flex;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid white;
   border-radius: 1.5rem;
 }
 
 .twelveNumbers p {
   color: #f5f5f5;
-  margin-left: 1.5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -149,12 +148,12 @@ button {
   }
 
   .deleteNumber button {
-    padding: 0.4rem;
+    padding: 0.875rem;
     font-size: 0.875rem;
   }
 
   .getTwelvesNumbers button {
-    padding: 0.4rem;
+    padding: 0.875rem;
     font-size: 0.875rem;
   }
 
@@ -172,7 +171,7 @@ button {
     gap: 1rem;
   }
   .twelveNumbers p {
-    margin-left: 0.8rem;
     font-size: 0.875rem;
+    padding: 0.3rem;
   }
 }
