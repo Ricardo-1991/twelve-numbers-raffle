@@ -123,13 +123,13 @@ button {
   font-size: 1.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 728px) {
   .chosenNumbers {
     padding: 0.875rem;
   }
   .chosenNumbers p {
     font-size: 0.9rem;
-    margin-left: 0.2rem;
+    margin-left: 0.15rem;
   }
 
   .selectNumbersContainer {
